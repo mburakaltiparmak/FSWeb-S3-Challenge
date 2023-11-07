@@ -64,29 +64,31 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: rgb(225, 239, 230);
 }
 
 h1 {
-    font-size: 7.5rem;
-}
-
-h2 {
     font-size: 6rem;
 }
 
-h3 {
+h2 {
     font-size: 5rem;
 }
 
-h4 {
+h3 {
     font-size: 4rem;
 }
 
-p, a {
+h4 {
     font-size: 3rem;
+   
 }
 
+p, a {
+    font-size: 2rem;
+}
 /* header section */
+
 header {
     width: 100%;
     height: 100vh;
@@ -94,8 +96,16 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
 
+}
+header h1{
+    text-align: center;
+}
+header nav div{
+    display: flex;
+    justify-content: center;
+    column-gap: 20rem;
+}
 /* spacer */
 .spacer {
     width: 100%;
@@ -119,14 +129,115 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
+.menu-container,h2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    column-gap: 15%;
+    background-color:rgb(0, 4, 17, .8);
+    
+}
+.menu-section{
+    width: 35%;
+    padding-bottom: 4rem;
+}
+h4{
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+}
+h2{
+    padding-bottom: 2rem;
+}
+.menu-item h4:first-child {
+    width: 45%;
+    text-align: left;
+}
+.menu-item {
+    padding-bottom: 3rem;
+}
+.menu-item p {
+    width: 55%;
+}
 
+/* footer section */
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color:rgb(0, 4, 17) ;
+    color:rgb(225, 239, 230) ;
 }
+footer > div{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+footer nav{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    align-items: end;
+}
+footer > p{
+    padding: 4rem;
+    text-align: right;
+    font-size: 2rem;
+}
+
+footer form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    justify-content: center;
+
+    
+}
+footer form p {
+    text-align: center;
+    width: 50%;
+}
+
+footer input , footer button{
+    display: flex;
+    font-size: 2rem;
+}
+footer input{
+width: 60%;
+}
+footer button{
+    width: 15%;
+}
+footer .copyright {
+    display: flex;
+    justify-content: end;
+    text-align: right;
+
+}
+footer .copyright p{
+    font-size: 2rem;
+}
+.kutu {
+    background-color: rgb(0, 4, 17, .8)
+}
+
+.socialMedia {
+    display: flex;
+    justify-content:center;
+    column-gap: 5rem;
+    
+}
+.socialMedia img{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 3rem;
+    height: 3rem;     
+    border: 2.5%;
+    border-radius: 25%;
+    background-color:rgb(225, 239, 230);
+}
+
 
 /* mobile media query */
 @media (max-width: 428px) {
@@ -137,10 +248,57 @@ footer {
         text-align: center;
         font-size: 4rem;
     }
-
     /* menu */
     .menu {
         background-image: none;
+        background-color: rgb(225, 239, 230);
+    }
+    .menu h2{
+        border-bottom: 10px solid black;
+        width: 80%;
+        margin:auto;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .menu h2,h3,h4,p {
+        color: rgb(0, 4, 17);;
+    }
+    .menu-container,h2{
+        background-color: inherit;
+    }
+    .menu-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-section {
+        width: 70%;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .menu-section h3{
+        
+        border: 5px solid black;
+        
+    }
+    .menu-item{
+        border-bottom: 2px solid black;
+        padding-top: 20px;
+    }
+    .menu-item h4{
+        display: block;
+        width: 100%;
+    }
+    .menu-item h4:first-child{
+        width: 100%;
+        text-align: center;
+    }
+    .menu-item h4:nth-child(2){
+        width: 100%;
+        text-align: center;
+    } 
+    .menu-item p{
+        width: 100%;
+        text-align: center;
     }
 
     /* footer section */
@@ -148,5 +306,56 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+    }
+    footer div{
+     
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    footer nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer > p {
+        text-align: center;
+    }
+    footer .copyright p {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+        color:rgb(225, 239, 230);
+    }
+    footer div form {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    footer input{
+        
+        font-size: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+    footer button {
+        flex-direction: column;
+        font-size: 1.5rem;
+        align-items: center;
+        width: 80%;
+        
+    }
+    footer form p {
+       color:rgb(225, 239, 230);
+    }
+    .socialMedia {
+        
+        column-gap: 1rem;
+        
+    }
+    nav div:first-child{
+        flex-direction: column;
+        align-items: center;
     }
 }
